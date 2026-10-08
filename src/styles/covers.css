@@ -1,0 +1,28 @@
+/* ---------- view switch ---------- */
+.viewsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--card)}
+.viewsw button{border:0;background:none;padding:7px 16px;border-radius:999px;cursor:pointer;font:600 13.5px Sora,system-ui,sans-serif;color:var(--muted)}
+.viewsw button[aria-pressed="true"]{background:var(--vf);color:var(--on-accent)}
+.topr{display:flex;gap:10px;align-items:center}
+body[data-view="gallery"] .hero,body[data-view="gallery"] .layout{display:none}
+body[data-view="map"] .gallery{display:none}
+
+/* ---------- passport cover ---------- */
+.pp{--pp:#1a2f63;--mx:50%;--my:30%;position:relative;aspect-ratio:88/125;border-radius:3.5% / 2.5%;overflow:hidden;container-type:inline-size;
+  background:
+    radial-gradient(120% 80% at var(--mx) var(--my),rgba(255,255,255,.10),transparent 55%),
+    linear-gradient(90deg,rgba(0,0,0,.45) 0,rgba(0,0,0,.15) 4%,rgba(255,255,255,.06) 5.5%,transparent 9%),
+    linear-gradient(160deg,color-mix(in srgb,var(--pp) 88%,#fff) 0%,var(--pp) 45%,color-mix(in srgb,var(--pp) 70%,#000) 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 14px 28px -12px rgba(0,0,0,.65),0 3px 6px rgba(0,0,0,.35);transform-style:preserve-3d;transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s}
+.pp::before{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 1.4 -0.35'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pp::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,236,190,.22) 48%,transparent 62%);background-size:250% 100%;background-position:var(--sx,100%) 0}
+.pp-in{position:absolute;inset:7cqw 8cqw 6cqw 11cqw;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center}
+.gold{background:linear-gradient(180deg,#f6e3a8 0%,#d6ad5c 45%,#a87a2e 70%,#e9cf86 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 .4cqw 0 rgba(0,0,0,.35))}
+.pp-name{font:600 9cqw/1.12 Cinzel,'Times New Roman',serif;letter-spacing:.06em;text-transform:uppercase;overflow-wrap:anywhere}
+.pp-name.long{font-size:7cqw}.pp-name.xlong{font-size:5.6cqw}
+.pp-emb{width:56cqw;height:56cqw;filter:drop-shadow(0 .5cqw 0 rgba(0,0,0,.35))}
+.pp-word{font:600 7.2cqw Cinzel,'Times New Roman',serif;letter-spacing:.18em;text-transform:uppercase}
+.pp-chip{width:14cqw;height:9cqw}
+.pp-rank{position:absolute;bottom:5cqw;right:5cqw;font:700 7cqw Sora,system-ui,sans-serif;color:var(--on-accent);background:var(--vf);border-radius:999px;padding:.5cqw 3cqw;z-index:2}

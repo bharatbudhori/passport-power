@@ -1,0 +1,29 @@
+.kbtn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;color:var(--ink);font:500 13px 'IBM Plex Mono',monospace}
+.kbtn:hover{border-color:var(--line2)}
+.kbtn kbd{font:inherit;color:var(--muted)}
+.kbtn .lbl{color:var(--muted);font-family:'IBM Plex Sans',system-ui,sans-serif}
+.cmdk{position:fixed;inset:0;z-index:90;background:color-mix(in srgb,var(--bg) 55%,transparent);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:flex-start;padding:max(10vh,calc(env(safe-area-inset-top,0px) + 20px)) 14px 20px}
+.cmdk[hidden]{display:none}
+.ck-panel{width:min(640px,100%);background:var(--card);border:1px solid var(--line2);border-radius:18px;box-shadow:0 30px 80px -20px #000a;overflow:hidden;display:flex;flex-direction:column;max-height:min(70vh,560px);animation:ckin .16s ease-out}
+@keyframes ckin{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
+.ck-top{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.ck-top input{flex:1;border:0;background:none;outline:0;font:500 18px Sora,system-ui,sans-serif;color:var(--ink);min-width:0}
+.ck-top input::placeholder{color:var(--muted);font-weight:400}
+.ck-top kbd{font:11px 'IBM Plex Mono',monospace;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+.ck-list{overflow:auto;padding:6px;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
+.ck-sec{font:600 12px Sora,system-ui,sans-serif;color:var(--muted);padding:10px 12px 4px}
+.ck-item{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;cursor:pointer;font-size:14.5px}
+.ck-item[aria-selected="true"]{background:color-mix(in srgb,var(--vf) 16%,transparent)}
+.ck-item.dis{cursor:default;color:var(--muted)}
+.ck-ic{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--bg);color:var(--muted);flex:none}
+.ck-item[aria-selected="true"] .ck-ic{color:var(--vf)}
+.ck-sw{width:36px;height:18px;flex:none}.ck-sw i{width:18px;height:18px}
+.ck-l{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ck-l mark{background:none;color:var(--vf);font-weight:600}
+.ck-h{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.ck-tips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 12px 6px;font-size:13px;color:var(--muted)}
+.ck-tips button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 10px;cursor:pointer;font:12.5px 'IBM Plex Mono',monospace;color:var(--ink)}
+.ck-empty{color:var(--muted);padding:18px 12px;margin:0}
+.ck-foot{display:flex;gap:16px;padding:10px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.ck-foot kbd{font:11px 'IBM Plex Mono',monospace;border:1px solid var(--line);border-radius:5px;padding:0 5px;margin-right:4px}
+@media (max-width:640px){.kbtn .lbl{display:none}.ck-foot{display:none}}

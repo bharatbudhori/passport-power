@@ -1,0 +1,32 @@
+.vscene{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.viewer>*:not(.vscene):not(.vcap){position:relative;z-index:1}
+.vlayer{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity 1.1s ease,transform 9s cubic-bezier(.2,.6,.2,1)}
+.vlayer.in{opacity:.9;transform:scale(1)}
+.vlayer.out{opacity:0;transition:opacity .9s ease}
+.vlayer svg{width:100%;height:100%;display:block}
+.vscene::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 50% 45%,rgba(8,6,24,.28),rgba(8,6,24,.05) 70%,rgba(8,6,24,.45) 100%),linear-gradient(180deg,rgba(8,6,24,.4),transparent 22%,transparent 78%,rgba(8,6,24,.6))}
+.vlayer .tw{animation:tw 3.6s ease-in-out infinite}
+@keyframes tw{50%{opacity:.1}}
+.vlayer .cloud{animation:drift 60s linear infinite alternate}
+@keyframes drift{to{transform:translateX(-160px)}}
+.vlayer .sails{animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vlayer .aurora{animation:aur 9s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes aur{0%{transform:skewX(-6deg) translateX(-30px);opacity:.35}100%{transform:skewX(6deg) translateX(40px);opacity:.7}}
+.vcap{position:absolute;left:22px;bottom:18px;z-index:2;font-size:12px;color:#d9d4ffb0;font-style:italic;opacity:0;transform:translateY(6px);transition:opacity .6s,transform .6s;pointer-events:none}
+.vcap.show{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.vlayer{transition:opacity .4s;transform:none}.vlayer .tw,.vlayer .cloud,.vlayer .sails,.vlayer .aurora{animation:none}}
+@media (max-width:640px){.vcap{display:none}}
+
+/* real photo layer (fades in over the illustration once loaded) */
+.vphoto{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.08);filter:saturate(.72) brightness(.62) contrast(.95);transition:opacity 1.2s ease,transform 14s cubic-bezier(.2,.6,.2,1)}
+/* medium black gradient wash: photo visible but calm behind the passports */
+.vphoto::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+  radial-gradient(ellipse 45% 58% at 50% 46%,rgba(0,0,0,.5),rgba(0,0,0,.15) 75%,transparent),
+  linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.15) 28%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.85) 100%),
+  linear-gradient(90deg,rgba(0,0,0,.5),transparent 30%,transparent 70%,rgba(0,0,0,.5))}
+.vphoto.in{opacity:1;transform:scale(1)}
+.vcap{pointer-events:auto}
+.vcap a{color:inherit;text-decoration:underline;text-decoration-color:#ffffff55;text-underline-offset:2px}
+@media (prefers-reduced-motion: reduce){.vphoto{transition:opacity .4s;transform:none}}

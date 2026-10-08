@@ -1,0 +1,57 @@
+/* stamp album, quiz, and duel */
+.textbtn{border:1px solid var(--line2);background:var(--card);border-radius:999px;padding:6px 12px;cursor:pointer;font:600 13px Sora,system-ui,sans-serif}
+.textbtn:hover{border-color:var(--ink)}
+.textbtn[aria-pressed="true"]{background:color-mix(in srgb,var(--ok) 22%,var(--card));border-color:var(--ok)}
+
+.playwrap{position:relative}
+.pmenu{position:absolute;right:0;top:calc(100% + 8px);z-index:40;min-width:180px;background:var(--card);border:1px solid var(--line2);border-radius:14px;padding:6px;box-shadow:var(--shadow);display:grid;gap:2px}
+.pmenu[hidden]{display:none}
+.pmenu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:9px;cursor:pointer;font:600 14px Sora,system-ui,sans-serif}
+.pmenu button:hover,.pmenu button:focus-visible{background:var(--bg2)}
+
+.modal{position:fixed;inset:0;z-index:70;background:#07061acc;display:grid;place-items:center;padding:24px}
+.modal[hidden]{display:none}
+.msheet{width:min(720px,100%);max-height:min(86vh,820px);overflow:auto;background:var(--card);color:var(--ink);border-radius:22px;padding:18px 18px 16px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.mhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+.mhead h2{margin:0;font:700 24px Sora,system-ui,sans-serif;letter-spacing:-.03em}
+.mhead p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.mclose{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:18px}
+
+.stamps{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:14px;margin-top:12px}
+.sealwrap{display:grid;justify-items:center;gap:4px}
+.gcap .gstamp{font-style:normal;font:600 10px Sora,system-ui,sans-serif;color:var(--ok)}
+.seal{border:0;background:transparent;cursor:pointer;color:inherit;display:grid;justify-items:center;gap:6px;padding:4px}
+.seal i{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font:700 18px Cinzel,serif;letter-spacing:.04em;color:#7a1d32;border:3px solid #7a1d32;box-shadow:inset 0 0 0 2px #7a1d3240;transform:rotate(-8deg);background:color-mix(in srgb,#7a1d32 8%,var(--bg))}
+.seal small{font-size:12px;text-align:center;color:var(--muted)}
+.seal:hover i{transform:rotate(-2deg) scale(1.04)}
+
+.qprogress{font:500 12px 'IBM Plex Mono',monospace;color:var(--muted)}
+.qtext{font:600 20px Sora,system-ui,sans-serif;margin:12px 0;letter-spacing:-.02em}
+.qchoices{display:grid;gap:8px}
+.qchoices button{text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:12px 14px;cursor:pointer;font-size:15px}
+.qchoices button:hover{border-color:var(--ink)}
+.qchoices button.good{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--bg))}
+.qchoices button.bad{border-color:var(--ws);background:color-mix(in srgb,var(--ws) 12%,var(--bg))}
+.qwhy{color:var(--muted);min-height:1.4em}
+.qnext{margin-top:8px}
+
+.duel{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin:8px 0 14px}
+.duelist{display:grid;justify-items:center;gap:8px;text-align:center}
+.duelist .pp{width:min(120px,28vw)}
+.duelist b{font:700 16px Sora,system-ui,sans-serif}
+.vs{font:800 22px Sora,system-ui,sans-serif;color:var(--vf)}
+.bars2{display:grid;gap:8px;margin:8px 0}
+.bars2 div{display:grid;grid-template-columns:88px 1fr 36px;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.bars2 i{display:block;height:8px;border-radius:99px;background:var(--track);position:relative;overflow:hidden}
+.bars2 i span{position:absolute;inset:0 auto 0 0;background:var(--vf)}
+.bars2 i span.b{background:var(--ws)}
+.winner{margin:0 0 8px;font:600 16px Sora,system-ui,sans-serif}
+.duelacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+
+@media (max-width:640px){
+  .duel{grid-template-columns:1fr;justify-items:center}
+  .vs{transform:rotate(90deg)}
+}
+@media (prefers-reduced-motion: reduce){
+  .seal i,.seal:hover i{transform:none}
+}

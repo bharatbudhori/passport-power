@@ -1,0 +1,798 @@
+{
+"AD": [
+"Casa de la Vall",
+"Andorra la Vella"
+],
+"AE": [
+"Burj Khalifa",
+"Sheikh Zayed Grand Mosque"
+],
+"AF": [
+"Band-e Amir National Park",
+"Minaret of Jam"
+],
+"AG": [
+"Nelson's Dockyard",
+"St. John's, Antigua and Barbuda"
+],
+"AL": [
+"Gjirokastër",
+"Berat"
+],
+"AM": [
+"Khor Virap",
+"Geghard"
+],
+"AO": [
+"Kalandula Falls",
+"Luanda"
+],
+"AR": [
+"Iguazu Falls",
+"Perito Moreno Glacier"
+],
+"AT": [
+"Hallstatt",
+"Schönbrunn Palace"
+],
+"AU": [
+"Sydney Opera House",
+"Uluru"
+],
+"AZ": [
+"Flame Towers",
+"Icherisheher"
+],
+"BA": [
+"Stari Most",
+"Sarajevo"
+],
+"BB": [
+"Bathsheba, Barbados",
+"Bridgetown"
+],
+"BD": [
+"Lalbagh Fort",
+"Sundarbans"
+],
+"BE": [
+"Grand-Place",
+"Atomium"
+],
+"BF": [
+"Ruins of Loropéni",
+"Ouagadougou"
+],
+"BG": [
+"Rila Monastery",
+"Alexander Nevsky Cathedral, Sofia"
+],
+"BH": [
+"Bahrain Fort",
+"Bahrain World Trade Center"
+],
+"BI": [
+"Lake Tanganyika",
+"Bujumbura"
+],
+"BJ": [
+"Ganvie",
+"Royal Palaces of Abomey"
+],
+"BN": [
+"Omar Ali Saifuddien Mosque",
+"Bandar Seri Begawan"
+],
+"BO": [
+"Salar de Uyuni",
+"La Paz"
+],
+"BR": [
+"Christ the Redeemer (statue)",
+"Sugarloaf Mountain"
+],
+"BS": [
+"Exuma",
+"Nassau, Bahamas"
+],
+"BT": [
+"Paro Taktsang",
+"Punakha Dzong"
+],
+"BW": [
+"Okavango Delta",
+"Chobe National Park"
+],
+"BY": [
+"Mir Castle Complex",
+"Nesvizh Castle"
+],
+"BZ": [
+"Great Blue Hole",
+"Xunantunich"
+],
+"CA": [
+"Moraine Lake",
+"CN Tower"
+],
+"CD": [
+"Nyiragongo",
+"Virunga National Park"
+],
+"CF": [
+"Boali Falls",
+"Bangui"
+],
+"CG": [
+"Odzala-Kokoua National Park",
+"Brazzaville"
+],
+"CH": [
+"Matterhorn",
+"Chillon Castle"
+],
+"CI": [
+"Basilica of Our Lady of Peace of Yamoussoukro",
+"Abidjan"
+],
+"CL": [
+"Torres del Paine National Park",
+"Moai"
+],
+"CM": [
+"Mount Cameroon",
+"Yaoundé"
+],
+"CN": [
+"Great Wall of China",
+"Forbidden City"
+],
+"CO": [
+"Cartagena, Colombia",
+"Caño Cristales"
+],
+"CR": [
+"Arenal Volcano",
+"Manuel Antonio National Park"
+],
+"CU": [
+"Old Havana",
+"Viñales Valley"
+],
+"CV": [
+"Pico do Fogo",
+"Sal, Cape Verde"
+],
+"CY": [
+"Kourion",
+"Petra tou Romiou"
+],
+"CZ": [
+"Charles Bridge",
+"Prague Castle"
+],
+"DE": [
+"Neuschwanstein Castle",
+"Brandenburg Gate"
+],
+"DJ": [
+"Lake Assal (Djibouti)",
+"Lac Abbé"
+],
+"DK": [
+"Nyhavn",
+"Kronborg"
+],
+"DM": [
+"Boiling Lake",
+"Trafalgar Falls"
+],
+"DO": [
+"Colonial City of Santo Domingo",
+"Punta Cana"
+],
+"DZ": [
+"Timgad",
+"Notre-Dame d'Afrique"
+],
+"EC": [
+"Galápagos Islands",
+"Cotopaxi"
+],
+"EE": [
+"Tallinn Old Town",
+"Kadriorg Palace"
+],
+"EG": [
+"Giza pyramid complex",
+"Abu Simbel"
+],
+"ER": [
+"Asmara",
+"Massawa"
+],
+"ES": [
+"Alhambra",
+"Sagrada Família"
+],
+"ET": [
+"Rock-Hewn Churches, Lalibela",
+"Simien Mountains National Park"
+],
+"FI": [
+"Helsinki Cathedral",
+"Suomenlinna"
+],
+"FJ": [
+"Mamanuca Islands",
+"Suva"
+],
+"FM": [
+"Nan Madol",
+"Pohnpei"
+],
+"FR": [
+"Eiffel Tower",
+"Mont-Saint-Michel"
+],
+"GA": [
+"Lopé National Park",
+"Libreville"
+],
+"GB": [
+"Palace of Westminster",
+"Tower Bridge"
+],
+"GD": [
+"Grand Anse Beach",
+"St. George's, Grenada"
+],
+"GE": [
+"Gergeti Trinity Church",
+"Tbilisi"
+],
+"GH": [
+"Cape Coast Castle",
+"Kakum National Park"
+],
+"GM": [
+"Kunta Kinteh Island",
+"Banjul"
+],
+"GN": [
+"Fouta Djallon",
+"Conakry"
+],
+"GQ": [
+"Malabo",
+"Bioko"
+],
+"GR": [
+"Parthenon",
+"Santorini"
+],
+"GT": [
+"Tikal",
+"Lake Atitlán"
+],
+"GW": [
+"Bijagós Archipelago",
+"Bissau"
+],
+"GY": [
+"Kaieteur Falls",
+"Georgetown, Guyana"
+],
+"HK": [
+"Victoria Harbour",
+"Victoria Peak"
+],
+"HN": [
+"Copán",
+"Roatán"
+],
+"HR": [
+"Dubrovnik",
+"Plitvice Lakes National Park"
+],
+"HT": [
+"Citadelle Laferrière",
+"Port-au-Prince"
+],
+"HU": [
+"Hungarian Parliament Building",
+"Széchenyi Chain Bridge"
+],
+"ID": [
+"Borobudur",
+"Mount Bromo"
+],
+"IE": [
+"Cliffs of Moher",
+"Rock of Cashel"
+],
+"IL": [
+"Masada",
+"Tel Aviv"
+],
+"IN": [
+"Taj Mahal",
+"Hawa Mahal"
+],
+"IQ": [
+"Ziggurat of Ur",
+"Erbil Citadel"
+],
+"IR": [
+"Naqsh-e Jahan Square",
+"Azadi Tower"
+],
+"IS": [
+"Skógafoss",
+"Hallgrímskirkja"
+],
+"IT": [
+"Colosseum",
+"Leaning Tower of Pisa"
+],
+"JM": [
+"Dunn's River Falls",
+"Blue Mountains (Jamaica)"
+],
+"JO": [
+"Petra",
+"Wadi Rum"
+],
+"JP": [
+"Mount Fuji",
+"Kinkaku-ji"
+],
+"KE": [
+"Maasai Mara",
+"Mount Kenya"
+],
+"KG": [
+"Issyk-Kul",
+"Burana Tower"
+],
+"KH": [
+"Angkor Wat",
+"Bayon"
+],
+"KI": [
+"Tarawa",
+"Kiritimati"
+],
+"KM": [
+"Mount Karthala",
+"Moroni, Comoros"
+],
+"KN": [
+"Brimstone Hill Fortress National Park",
+"Basseterre"
+],
+"KP": [
+"Mount Paektu",
+"Pyongyang"
+],
+"KR": [
+"Gyeongbokgung",
+"Bulguksa"
+],
+"KW": [
+"Kuwait Towers",
+"Liberation Tower (Kuwait)"
+],
+"KZ": [
+"Charyn Canyon",
+"Bayterek tower"
+],
+"LA": [
+"Pha That Luang",
+"Luang Prabang"
+],
+"LB": [
+"Baalbek",
+"Jeita Grotto"
+],
+"LC": [
+"Pitons (Saint Lucia)",
+"Castries"
+],
+"LI": [
+"Vaduz Castle",
+"Vaduz"
+],
+"LK": [
+"Sigiriya",
+"Temple of the Tooth"
+],
+"LR": [
+"Sapo National Park",
+"Monrovia"
+],
+"LS": [
+"Maletsunyane Falls",
+"Sani Pass"
+],
+"LT": [
+"Trakai Island Castle",
+"Vilnius Old Town"
+],
+"LU": [
+"Vianden Castle",
+"Luxembourg City"
+],
+"LV": [
+"House of the Blackheads (Riga)",
+"Riga"
+],
+"LY": [
+"Leptis Magna",
+"Ghadames"
+],
+"MA": [
+"Hassan II Mosque",
+"Chefchaouen"
+],
+"MC": [
+"Monte Carlo Casino",
+"Port Hercule"
+],
+"MD": [
+"Old Orhei",
+"Chișinău"
+],
+"ME": [
+"Bay of Kotor",
+"Sveti Stefan"
+],
+"MG": [
+"Avenue of the Baobabs",
+"Tsingy de Bemaraha National Park"
+],
+"MH": [
+"Majuro",
+"Bikini Atoll"
+],
+"MK": [
+"Lake Ohrid",
+"Church of St. John at Kaneo"
+],
+"ML": [
+"Great Mosque of Djenné",
+"Timbuktu"
+],
+"MM": [
+"Bagan",
+"Shwedagon Pagoda"
+],
+"MN": [
+"Gorkhi-Terelj National Park",
+"Ulaanbaatar"
+],
+"MO": [
+"Ruins of St. Paul's",
+"Senado Square"
+],
+"MR": [
+"Chinguetti",
+"Banc d'Arguin National Park"
+],
+"MT": [
+"Valletta",
+"Blue Grotto (Malta)"
+],
+"MU": [
+"Le Morne Brabant",
+"Chamarel"
+],
+"MV": [
+"Malé",
+"Maldives"
+],
+"MW": [
+"Lake Malawi",
+"Lake Malawi National Park"
+],
+"MX": [
+"Chichen Itza",
+"Teotihuacan"
+],
+"MY": [
+"Petronas Towers",
+"Mount Kinabalu"
+],
+"MZ": [
+"Island of Mozambique",
+"Bazaruto Archipelago"
+],
+"NA": [
+"Deadvlei",
+"Sossusvlei"
+],
+"NE": [
+"Grand Mosque of Agadez",
+"Aïr Mountains"
+],
+"NG": [
+"Zuma Rock",
+"Olumo Rock"
+],
+"NI": [
+"Granada, Nicaragua",
+"Ometepe"
+],
+"NL": [
+"Kinderdijk",
+"Rijksmuseum"
+],
+"NO": [
+"Geirangerfjord",
+"Preikestolen"
+],
+"NP": [
+"Mount Everest",
+"Boudhanath"
+],
+"NR": [
+"Nauru",
+"Anibare Bay"
+],
+"NZ": [
+"Milford Sound",
+"Aoraki / Mount Cook"
+],
+"OM": [
+"Sultan Qaboos Grand Mosque",
+"Wahiba Sands"
+],
+"PA": [
+"Panama Canal",
+"Panama City"
+],
+"PE": [
+"Machu Picchu",
+"Vinicunca"
+],
+"PG": [
+"Mount Wilhelm",
+"Port Moresby"
+],
+"PH": [
+"Chocolate Hills",
+"Banaue Rice Terraces"
+],
+"PK": [
+"Badshahi Mosque",
+"K2"
+],
+"PL": [
+"Wawel Castle",
+"Main Square, Kraków"
+],
+"PS": [
+"Church of the Nativity",
+"Hisham's Palace"
+],
+"PT": [
+"Belém Tower",
+"Pena Palace"
+],
+"PW": [
+"Rock Islands",
+"Koror"
+],
+"PY": [
+"Jesuit Missions of La Santísima Trinidad de Paraná and Jesús de Tavarangue",
+"Asunción"
+],
+"QA": [
+"Museum of Islamic Art, Doha",
+"Doha"
+],
+"RO": [
+"Bran Castle",
+"Peleș Castle"
+],
+"RS": [
+"Belgrade Fortress",
+"Church of Saint Sava"
+],
+"RU": [
+"Saint Basil's Cathedral",
+"Moscow Kremlin"
+],
+"RW": [
+"Volcanoes National Park",
+"Lake Kivu"
+],
+"SA": [
+"Hegra (Mada'in Salih)",
+"Kingdom Centre"
+],
+"SB": [
+"Marovo Lagoon",
+"Honiara"
+],
+"SC": [
+"Anse Source d'Argent",
+"Vallée de Mai"
+],
+"SD": [
+"Meroë",
+"Jebel Barkal"
+],
+"SE": [
+"Gamla stan",
+"Stockholm Palace"
+],
+"SG": [
+"Marina Bay Sands",
+"Gardens by the Bay"
+],
+"SI": [
+"Lake Bled",
+"Ljubljana"
+],
+"SK": [
+"Spiš Castle",
+"Bratislava Castle"
+],
+"SL": [
+"Banana Islands",
+"Freetown"
+],
+"SM": [
+"Guaita",
+"City of San Marino"
+],
+"SN": [
+"Gorée",
+"Lake Retba"
+],
+"SO": [
+"Laas Geel",
+"Mogadishu"
+],
+"SR": [
+"Paramaribo",
+"Central Suriname Nature Reserve"
+],
+"SS": [
+"Sudd",
+"Juba"
+],
+"ST": [
+"Pico Cão Grande",
+"São Tomé"
+],
+"SV": [
+"Santa Ana Volcano",
+"Joya de Cerén"
+],
+"SY": [
+"Krak des Chevaliers",
+"Palmyra"
+],
+"SZ": [
+"Mantenga Nature Reserve",
+"Mbabane"
+],
+"TD": [
+"Ennedi Plateau",
+"Lake Chad"
+],
+"TG": [
+"Koutammakou",
+"Lomé"
+],
+"TH": [
+"Wat Arun",
+"Grand Palace"
+],
+"TJ": [
+"Iskanderkul",
+"Pamir Mountains"
+],
+"TL": [
+"Atauro Island",
+"Dili"
+],
+"TM": [
+"Darvaza gas crater",
+"Ashgabat"
+],
+"TN": [
+"Amphitheatre of El Jem",
+"Sidi Bou Said"
+],
+"TO": [
+"Haʻamonga ʻa Maui",
+"Nukuʻalofa"
+],
+"TR": [
+"Cappadocia",
+"Hagia Sophia"
+],
+"TT": [
+"Maracas Bay",
+"Port of Spain"
+],
+"TV": [
+"Funafuti",
+"Tuvalu"
+],
+"TW": [
+"Taipei 101",
+"Taroko National Park"
+],
+"TZ": [
+"Mount Kilimanjaro",
+"Serengeti National Park"
+],
+"UA": [
+"Saint Sophia Cathedral, Kyiv",
+"Kamianets-Podilskyi Castle"
+],
+"UG": [
+"Murchison Falls",
+"Bwindi Impenetrable National Park"
+],
+"US": [
+"Golden Gate Bridge",
+"Statue of Liberty"
+],
+"UY": [
+"Colonia del Sacramento",
+"Punta del Este"
+],
+"UZ": [
+"Registan",
+"Itchan Kala"
+],
+"VA": [
+"St. Peter's Basilica",
+"St. Peter's Square"
+],
+"VC": [
+"Tobago Cays",
+"Kingstown"
+],
+"VE": [
+"Angel Falls",
+"Mount Roraima"
+],
+"VN": [
+"Hạ Long Bay",
+"Hội An"
+],
+"VU": [
+"Mount Yasur",
+"Port Vila"
+],
+"WS": [
+"To Sua Ocean Trench",
+"Apia"
+],
+"XK": [
+"Prizren",
+"Gračanica Monastery"
+],
+"YE": [
+"Shibam",
+"Socotra"
+],
+"ZA": [
+"Table Mountain",
+"Cape of Good Hope"
+],
+"ZM": [
+"Victoria Falls",
+"South Luangwa National Park"
+],
+"ZW": [
+"Great Zimbabwe",
+"Victoria Falls"
+]
+}

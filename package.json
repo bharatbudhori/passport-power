@@ -1,0 +1,22 @@
+{
+  "name": "passport-power",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interactive passport power visualisation: ring + globe, trip checker, passport gallery with 3D viewer, themes, command palette.",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "lint": "eslint src",
+    "photos": "python3 scripts/fetch_landmark_photos.py"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "vite": "^5.4.8"
+  }
+}
