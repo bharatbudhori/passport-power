@@ -18,7 +18,7 @@
 .ghead span{font:500 13px 'IBM Plex Mono',monospace;color:var(--muted)}
 .ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:22px 18px;perspective:900px}
 .gcard{border:0;background:none;padding:0;cursor:pointer;text-align:left;color:inherit;display:flex;flex-direction:column;gap:8px}
-.gcard:hover .pp,.gcard:focus-visible .pp{box-shadow:0 1px 0 rgba(255,255,255,.1) inset,0 24px 40px -14px rgba(0,0,0,.8),0 0 0 1px rgba(244,194,122,.4)}
+.gcard:hover .pp,.gcard:focus-visible .pp{box-shadow:inset 0 0 16cqw rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.16),0 24px 40px -14px rgba(0,0,0,.8),0 0 0 1px rgba(244,194,122,.4)}
 .gcard:hover .pp::after{opacity:1}
 .gcap{display:flex;justify-content:space-between;gap:6px;font-size:13px;line-height:1.3}
 .gcap b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
