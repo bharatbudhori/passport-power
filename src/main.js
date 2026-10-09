@@ -7,6 +7,7 @@ import './styles/scenes.css';
 import './styles/themes.css';
 import './styles/palette.css';
 import './styles/play.css';
+import './styles/fx.css';
 
 import { C } from './core/data.js';
 import { state } from './core/state.js';

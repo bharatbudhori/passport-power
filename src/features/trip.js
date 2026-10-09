@@ -3,6 +3,7 @@ import { state, verdictFor } from '../core/state.js';
 import { dotFor, esc } from '../core/utils.js';
 import { flyBetween, paintGlobe, renderGlobe } from './chart.js';
 import { select } from './controls.js';
+import { followDest } from './fx.js';
 import { sfx } from './sound.js';
 
 /* ---------- combobox ---------- */
@@ -37,7 +38,7 @@ export const destCombo=combo(document.getElementById('cDest'),'dest-in',{placeho
   meta:c=>{const v=verdictFor(state.sel,c.i); return `${dotFor(v.k)}${v.t}`;}});
 
 export function setDest(i){
-  state.dest=i; destCombo.set(i); renderVerdict(); paintGlobe(); renderGlobe();
+  state.dest=i; destCombo.set(i); renderVerdict(); followDest(); paintGlobe(); renderGlobe();
   if(i!=null&&i!==state.sel){ const k=verdictFor(state.sel,i).k; sfx(k==='vf'?'stamp':k==='req'?'deny':'tap'); }
   if(i!=null&&i!==state.sel) flyBetween(C[state.sel],C[i]);
 }

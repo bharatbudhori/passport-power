@@ -27,7 +27,7 @@
 <body>
 <header class="top">
   <div class="brand"><h1>Passport Power</h1><p class="asof">Visa requirements for 199 passports</p></div>
-  <div class="topr"><div class="viewsw" role="group" aria-label="View"><button data-view="map" aria-pressed="true">Visa map</button><button data-view="gallery" aria-pressed="false">Passports</button></div>
+  <div class="topr"><div class="viewsw" role="group" aria-label="View"><button data-view="map" aria-pressed="true">Visa map</button><button data-view="money" aria-pressed="false">Money</button><button data-view="gallery" aria-pressed="false">Passports</button></div>
   <div class="playwrap"><button class="kbtn" id="play-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="playmenu">Play</button>
     <div class="pmenu" id="playmenu" role="menu" hidden>
       <button type="button" role="menuitem" data-play="stamps">Stamp album</button>
@@ -130,6 +130,26 @@
     <div class="detail" id="detail"></div>
   </section>
 </main>
+<section class="moneyview" id="fx" aria-label="Currency converter">
+  <div class="fxglow" aria-hidden="true"></div>
+  <p class="fxmark" id="fx-mark" aria-hidden="true"></p>
+  <div class="fxstage">
+    <div class="fxkicker">
+      <p id="fx-sub">What this passport spends abroad.</p>
+      <button type="button" id="fx-sync" hidden>Use this trip</button>
+    </div>
+    <div class="fxout" id="fx-out" aria-live="polite"></div>
+    <div class="fxdesk">
+      <label class="fxplate"><span>You have</span><input id="fx-amt" inputmode="decimal" autocomplete="off" spellcheck="false" aria-label="Amount to convert" value="1000"><select id="fx-from" aria-label="Currency you have"></select></label>
+      <button type="button" class="fxswap" id="fx-swap" aria-label="Swap currencies"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h11M15 4l3 3-3 3M17 17H6M9 20l-3-3 3-3"/></svg></button>
+      <label class="fxplate"><span>Worth</span><b class="fxcode" id="fx-code" aria-hidden="true"></b><select id="fx-to" aria-label="Currency to convert into"></select></label>
+    </div>
+    <div class="fxquick" id="fx-quick" role="group" aria-label="Quick amounts"></div>
+    <h2 class="fxmoreh">The same amount, elsewhere</h2>
+    <div class="fxmore" id="fx-more"></div>
+    <p class="fxfoot" id="fx-foot"></p>
+  </div>
+</section>
 <section class="gallery" aria-label="Passport covers">
   <div class="gshell">
     <div class="gtabs" role="tablist"><button data-gtab="explore" role="tab" aria-selected="true">Explore</button><button data-gtab="rank" role="tab" aria-selected="false">Rank</button></div>

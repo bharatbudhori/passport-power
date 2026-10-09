@@ -7,6 +7,7 @@ import { renderDetail } from './detail.js';
 import { setSfx, sfx } from './sound.js';
 import { PRESETS, applyTheme, custom, themeId } from './themes.js';
 import { openAlbum, openDuel, openQuiz } from './play.js';
+import { applyConvert, focusFx } from './fx.js';
 import { setDest } from './trip.js';
 import { openViewer } from './viewer.js';
 import { setView } from './views.js';
@@ -38,7 +39,8 @@ export const ICON={go:'<svg width="16" height="16" viewBox="0 0 24 24" fill="non
   book:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></svg>',
   cmp:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v18M16 3v18M3 8h5M16 16h5"/></svg>',
   trip:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
-  act:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 3 4 14h7l-1 7 9-11h-7z"/></svg>'};
+  act:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 3 4 14h7l-1 7 9-11h-7z"/></svg>',
+  fx:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h11M15 4l3 3-3 3M17 17H6M9 20l-3-3 3-3"/></svg>'};
 export const scrollTopSmooth=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
 export function doCompare(a,b){ setView('map'); if(state.sel!==a.i) select(a.i); state.dtab='cmp'; state.cmp=b.i; renderDetail(); paintRing();
   setTimeout(()=>document.getElementById('detail').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}),150); }
@@ -64,6 +66,7 @@ export const ACTIONS=[
   ['Open the stamp album','stamps album collection',()=>openAlbum()],
   ['Play the passport quiz','quiz play game',()=>openQuiz()],
   ['Duel two passports','duel versus battle',()=>openDuel()],
+  ['Convert currency','money forex exchange rate convert',()=>focusFx()],
 ];
 export let pItems=[], pAct=0;
 export function build(q){
@@ -78,6 +81,9 @@ export function build(q){
   const trip=raw.match(/^(?:check\s+|trip\s+)?(.+?)\s+(?:to|->|→)\s+(.+)$/i);
   if(trip&&!m){ const a=findCountry(trip[1]), b=findCountry(trip[2]); if(a&&b){ const v=verdictFor(a.i,b.i); out.push({sec:'Trip check',icon:ICON.trip,label:`${a.name} passport to ${b.name}`,hint:v.t,dot:v.k,run:()=>doTrip(a,b)}); } }
   const who=n.match(/^who can (?:enter|visit|go to)\s+(.+)/); if(who){ const c=findCountry(who[1]); if(c) out.push({sec:'Explore',icon:ICON.go,label:`Who can enter ${c.name}`,hint:`${c.ws} passports welcome`,run:()=>{select(c.i); setMode('in'); scrollTopSmooth();}}); }
+  const fxm=raw.match(/^(?:convert\s+)?(\d[\d,]*(?:\.\d+)?)?\s*([a-z]{3})\s+(?:to|in|into)\s+([a-z]{3})$/i);
+  if(fxm){ const amt=fxm[1]?Number(fxm[1].replace(/,/g,'')):null, a=fxm[2].toUpperCase(), b=fxm[3].toUpperCase();
+    out.push({sec:'Money',icon:ICON.fx,label:amt!=null&&amt>=0?`Convert ${new Intl.NumberFormat('en').format(amt)} ${a} to ${b}`:`Convert ${a} to ${b}`,hint:'Live mid-market rate',run:()=>applyConvert(a,b,amt)}); }
   if(!m&&!tm&&!who){
     const cs=C.map(c=>({c,s:Math.max(score(c.name,raw),norm(c.code)===n?300:-1)})).filter(o=>o.s>0).sort((a,b)=>b.s-a.s||b.c.ms-a.c.ms).slice(0,raw?6:0);
     cs.forEach(({c},k)=>{ out.push({sec:'Passports',icon:ICON.go,label:c.name,hlq:raw,hint:`Rank ${c.rank}, MS ${c.ms}`,run:()=>{setView('map'); select(c.i); scrollTopSmooth();}});
@@ -92,7 +98,7 @@ export function build(q){
 export function renderPal(){
   pItems=build(pin.value); pAct=Math.min(pAct,Math.max(0,pItems.length-1)); while(pItems[pAct]&&!pItems[pAct].run&&pAct<pItems.length-1) pAct++;
   let sec='', html='';
-  if(!pin.value.trim()) html+=`<div class="ck-tips">Try <button data-try="Japan">Japan</button><button data-try="compare India Germany">compare India Germany</button><button data-try="India to Thailand">India to Thailand</button><button data-try="theme nord">theme nord</button><button data-try="who can enter Brazil">who can enter Brazil</button></div>`;
+  if(!pin.value.trim()) html+=`<div class="ck-tips">Try <button data-try="Japan">Japan</button><button data-try="compare India Germany">compare India Germany</button><button data-try="India to Thailand">India to Thailand</button><button data-try="100 USD to EUR">100 USD to EUR</button><button data-try="theme nord">theme nord</button></div>`;
   pItems.forEach((it,k)=>{ if(it.sec!==sec){ sec=it.sec; html+=`<div class="ck-sec" role="presentation">${sec}</div>`; }
     const lead=it.sw?`<span class="sws ck-sw" aria-hidden="true"><i style="background:${it.sw[0]};left:0"></i><i style="background:${it.sw[1]};left:9px"></i><i style="background:${it.sw[2]};left:18px"></i></span>`:`<span class="ck-ic" aria-hidden="true">${it.icon||''}</span>`;
     html+=`<div class="ck-item${it.run?'':' dis'}" role="option" id="ck-o${k}" data-k="${k}" aria-selected="${k===pAct}">${lead}<span class="ck-l">${it.hlq!=null?hl(it.label,it.hlq):esc(it.label)}</span>${it.hint?`<span class="ck-h">${it.dot?dotFor(it.dot):''}${esc(it.hint)}</span>`:''}</div>`; });

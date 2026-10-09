@@ -4,6 +4,7 @@ import { drawArcs, flyTo, layout, paintGlobe, paintRing, renderGlobe, setHover }
 import { renderDetail, renderNow } from './detail.js';
 import { sfx } from './sound.js';
 import { renderTable } from './table.js';
+import { followPassport } from './fx.js';
 import { destCombo, passCombo, renderVerdict } from './trip.js';
 
 /* ---------- selection & controls ---------- */
@@ -13,7 +14,7 @@ export function select(i,opt={}){
   state.open.add(C[i].reg);
   history.replaceState(null,'','#'+C[i].code);
   passCombo.set(i); destCombo.refresh();
-  paintRing(); paintGlobe(); renderTable(); renderDetail(); renderNow(); renderVerdict(); drawArcs();
+  paintRing(); paintGlobe(); renderTable(); renderDetail(); renderNow(); renderVerdict(); followPassport(); drawArcs();
   flyTo(C[i].lng,C[i].lat);
   if(!opt.fromTable){const r=document.querySelector(`.row[data-i="${i}"]`); if(r){const w=document.getElementById('tablewrap'); w.scrollTop=r.offsetTop-w.offsetTop-80;}}
   if(state.hover!=null) setHover(state.hover);

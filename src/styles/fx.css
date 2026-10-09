@@ -1,0 +1,49 @@
+/* ---------- money view ---------- */
+.moneyview{display:none;position:relative;min-height:calc(100dvh - var(--bar,72px));overflow:hidden}
+body[data-view="money"] .moneyview{display:block}
+.fxglow{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(1100px 620px at 18% -12%,color-mix(in srgb,var(--vf) 46%,transparent),transparent 62%),
+  radial-gradient(820px 560px at 100% 18%,color-mix(in srgb,var(--vf) 16%,transparent),transparent 58%),
+  radial-gradient(900px 520px at 70% 120%,color-mix(in srgb,var(--ev) 28%,transparent),transparent 64%)}
+.fxmark{position:absolute;left:50%;top:16%;transform:translateX(-50%);margin:0;font:800 34vw/0.75 Sora,system-ui,sans-serif;letter-spacing:-.07em;color:var(--ink);opacity:.05;pointer-events:none;user-select:none;white-space:nowrap}
+.fxstage{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:42px 28px 64px}
+.fxkicker{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px;min-height:28px}
+.fxkicker p{margin:0;color:var(--muted);font:500 15px Sora,system-ui,sans-serif;letter-spacing:.01em}
+#fx-sync{border:1px solid var(--line2);background:color-mix(in srgb,var(--card) 80%,transparent);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer;font:600 13px Sora,system-ui,sans-serif}
+#fx-sync:hover{border-color:var(--vf)}
+.fxout{padding:18px 0 8px;min-height:140px}
+.fxbig{margin:0;font:800 clamp(64px,9vw,118px)/.92 Sora,system-ui,sans-serif;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.fxeq{margin:14px 0 0;color:var(--muted);font:500 clamp(16px,2vw,20px) Sora,system-ui,sans-serif}
+.fxrate{margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 28px;font:500 15px 'IBM Plex Mono',monospace;color:var(--ink)}
+.fxrate span{color:var(--muted)}
+.fxwait{margin:28px 0 0;color:var(--muted);font-size:18px}
+.fxwait button{border:0;background:none;color:var(--vf);font:600 18px Sora,system-ui,sans-serif;cursor:pointer;padding:0}
+.fxdesk{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:stretch;margin-top:28px}
+.fxplate{display:flex;flex-direction:column;gap:2px;min-width:0;padding:16px 18px 12px;border-radius:22px;background:color-mix(in srgb,var(--card) 86%,transparent);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.fxplate:focus-within{border-color:var(--vf)}
+.fxplate span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fxplate input,.fxplate select,.fxcode{width:100%;border:0;background:transparent;color:var(--ink);outline:0;font:700 clamp(26px,3vw,40px)/1.15 Sora,system-ui,sans-serif;padding:6px 0 2px;min-width:0}
+.fxcode{display:block;letter-spacing:-.04em;pointer-events:none}
+.fxplate select{font-size:clamp(16px,1.6vw,20px);font-weight:600;cursor:pointer}
+.fxswap{width:58px;height:58px;align-self:center;border-radius:50%;border:1px solid var(--line2);background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow)}
+.fxswap:hover{border-color:var(--vf);color:var(--vf)}
+.fxquick{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.fxquick button{border:1px solid var(--line);background:color-mix(in srgb,var(--card) 70%,transparent);color:var(--muted);border-radius:999px;padding:8px 16px;cursor:pointer;font:600 14px 'IBM Plex Mono',monospace}
+.fxquick button[aria-pressed="true"]{background:var(--vf);border-color:var(--vf);color:var(--on-accent)}
+.fxmoreh{margin:42px 0 14px;font:600 13px Sora,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fxmore{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.fxtile{text-align:left;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 78%,transparent);color:inherit;border-radius:18px;padding:16px 16px 14px;cursor:pointer;min-width:0}
+.fxtile:hover,.fxtile:focus-visible{border-color:var(--vf);outline:none}
+.fxtile b{display:block;font:700 clamp(18px,1.7vw,26px)/1.15 Sora,system-ui,sans-serif;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fxtile span{display:block;margin-top:4px;color:var(--muted);font-size:13px;line-height:1.35}
+.fxfoot{margin:22px 0 0;color:var(--muted);font-size:12.5px}
+.fxfoot a{color:inherit}
+@media (max-width:720px){
+  .fxstage{padding:28px 16px 40px}
+  .fxmark{font-size:42vw;top:108px;opacity:.04}
+  .fxbig{font-size:clamp(52px,16vw,72px)}
+  .fxdesk{grid-template-columns:1fr;gap:10px}
+  .fxswap{justify-self:center}
+  .fxplate input{font-size:32px}
+  .fxmore{grid-template-columns:1fr 1fr}
+}
